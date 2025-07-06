@@ -5,7 +5,9 @@ let Biography = document.querySelector("#bio");
 let imgOutput = document.querySelector("#Githubpicture");
 
 button.addEventListener("click", () => {
-  document.querySelector("#outputcontainer").classList.add("visable");
+  document
+    .querySelector("#outputcontainer", "#Githubpicture")
+    .classList.add("visable");
   fetch(`https://api.github.com/users/${userinput.value}`)
     .then((info) => info.json())
     .then((data) => {
